@@ -34,9 +34,20 @@
 
 function BuildIt(stories, building) {
     let height = parseInt(stories.value) * 50;
-    building.style.height = height.toString() + "px";
+    //building.style.height = height.toString() + "px";
     building.style.background = 'linear-gradient(170deg, #666, #666)';
     document.getElementById(building.id).setAttribute("class", "skyscraper");
+
+    building.animate([
+        // keyframes
+        { height: '0px' },
+        { height: height.toString() + "px" }
+    ], {
+        // timing options
+            duration: 1000,
+            fill: 'forwards',
+            easing: "ease-in-out"
+    });
 }
 
 function Demolish() {
