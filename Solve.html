@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="Krona_One/favicon-32x32.png">
+
+    <title>Sunset Hills</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link href="Content/CustomCSS.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/8b5ae67e5c.js" crossorigin="anonymous"></script>
+
+    <!-- Sweet Alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+            <a class="navbar-brand" href="/Index.html">Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Index.html">Intro</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/Solve.html">Solution</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Code.html">The Code</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/mackenzieweaver/SunsetHills" target="_blank">Github</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://mackenzie-weaver.netlify.app/" target="_blank">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" target="_blank">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" target="_blank">YouTube</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1 class="mt-5">The Solution</h1>
+            </div>
+        </div>
+        <!-- ================== Fizz Buzz ================== -->
+        <div class="jumbotron text-center">
+            <h3 class="display-4">Sunset Hills</h3>
+            <p>
+                Enter in a fizz number, buzz number, upper limit number and click create to build a table which will tell you the line number and whether that number is a multiple of fizz, buzz, or both. You can download the table in xlsx format if you would like.
+            </p>
+            <hr class="my-4">
+            <div class="input-group">
+                <input id="fizz-num" type="number" class="form-control" placeholder="Fizz Number" min="1" max="5000" oninput="validity.valid||(value='');" />
+                <input id="buzz-num" type="number" class="form-control" placeholder="Buzz Number" min="1" max="5000" oninput="validity.valid||(value='');" />
+                <input id="upper-limit" type="number" class="form-control" placeholder="Upper Limit" min="1" max="5000" oninput="validity.valid||(value='');" />
+                <div class="input-group-append" id="button-addon4">
+                    <button id="clear-fizz-buzz" class="btn btn-danger" onclick="ClearFizzBuzz()">Clear</button>
+                    <button class="btn btn-dark" onclick="FizzBuzz(
+                        parseInt(document.getElementById('fizz-num').value),
+                        parseInt(document.getElementById('buzz-num').value),
+                        parseInt(document.getElementById('upper-limit').value)
+                    )">
+                        Create
+                    </button>
+                    <button id="btnExport" class="btn btn-success" onclick="exportReportToExcel(this)"><i class="fas fa-download"></i></button>
+                </div>
+            </div>            
+            <table id="fizz-buzz-table" class="table table-striped table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Fizz</th>
+                        <th scope="col">Buzz</th>
+                        <th scope="col">Fizz Buzz</th>
+                    </tr>
+                </thead>
+                <tbody id="fizz-buzz-table-body">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- ================== End Page Content ================== -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <!-- My Custom JS -->
+    <script src="Scripts/CustomJS.js"></script>
+
+    <!-- Sweet Alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- Table Export -->
+    <script src="https://cdn.jsdelivr.net/gh/linways/table-to-excel@v1.0.4/dist/tableToExcel.js"></script>
+
+</body>
+
+</html>
