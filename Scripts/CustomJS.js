@@ -1,6 +1,6 @@
 ﻿function Sunset(...buildings) {
     // First building can always see sunset   
-    let results = ['See'];  
+    let results = ['See'];
     // For each building (excluding the first one)
     for (let i = 1; i < buildings.length; i++) {
         // assume no building is bigger
@@ -21,6 +21,14 @@
         // If there's a bigger building we're blind, otherwise we can see
         bigger ? results.push("Blind") : results.push("See");
     }
+
+    // How many can see?
+    let see = results.filter(x => x == 'See').length;
+    results.push(see);
+    // How many are blind?
+    let blind = results.filter(x => x == 'Blind').length;
+    results.push(blind);
+
     document.getElementById("result").innerText = results;
 }
 
