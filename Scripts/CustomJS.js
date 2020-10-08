@@ -32,6 +32,13 @@
     document.getElementById("result").innerText = results;
 }
 
+function BuildIt(stories, building) {
+    let height = parseInt(stories.value) * 50;
+    building.style.height = height.toString() + "px";
+    building.style.background = 'linear-gradient(170deg, #666, #666)';
+    document.getElementById(building.id).setAttribute("class", "skyscraper");
+}
+
 function Demolish() {
     console.log("Rubbles...")
     document.getElementById('b1').value = '';

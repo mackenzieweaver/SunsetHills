@@ -19,6 +19,9 @@
     <!-- Custom CSS -->
     <link href="Content/CustomCSS.css" rel="stylesheet" />
 
+    <!-- Skyscraper -->
+    <link href="Content/skyscraper.css" rel="stylesheet" />
+
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/8b5ae67e5c.js" crossorigin="anonymous"></script>
 
@@ -56,7 +59,7 @@
                         <a class="nav-link" href="#" target="_blank">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" target="_blank">YouTube</a>
+                        <a class="nav-link" href="https://youtu.be/vE3CCl63qMg" target="_blank">YouTube</a>
                     </li>
                 </ul>
             </div>
@@ -70,22 +73,113 @@
                 <h1 class="mt-5">The Solution</h1>
             </div>
         </div>
-        <!-- ================== Fizz Buzz ================== -->
+        <!-- ================== Sunset Hills ================== -->
         <div class="jumbotron text-center">
             <h3 class="display-4">Sunset Hills</h3>
             <p>
-                Enter in a number between 1 and 200 into each of the input fields. These numbers will represent how many floors are in each building. Since the sun sets in the west, the left-most building will always be able to see the sunset. The algorithm will tell you of the rest of the buildings which ones can see the sunset. If the left most building is the tallest, none of the others will be able to see.
+                Enter in a number between 1 and 10 into each of the input fields. These numbers will represent how many floors are in each building. Since the sun sets in the west, the left-most building will always be able to see the sunset. The algorithm will tell you of the rest of the buildings which ones can see the sunset. If the left most building is the tallest, none of the others will be able to see.
             </p>
             <hr class="my-4">
-            <div class="row justify-content-center">
+            <div id="skyscrapers" class="row">
+                <div id="sky1">
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                </div>
+                <div id="sky2">
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                </div>
+                <div  id="sky3">
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                </div>
+                <div  id="sky4">
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                </div>
+                <div  id="sky5">
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>
+                </div>
+            </div>
+            <div id="output" class="row justify-content-center">
                 <div class="p-3 mb-5 bg-white rounded">Result: <span id="result"></span></div>
             </div>
             <div class="input-group">
-                <input id="b1" type="number" class="form-control" placeholder="Bldg 1 # of floors" min="1" max="200" oninput="validity.valid||(value='');" />
-                <input id="b2" type="number" class="form-control" placeholder="Bldg 2 # of floors" min="1" max="200" oninput="validity.valid||(value='');" />
-                <input id="b3" type="number" class="form-control" placeholder="Bldg 3 # of floors" min="1" max="200" oninput="validity.valid||(value='');" />
-                <input id="b4" type="number" class="form-control" placeholder="Bldg 4 # of floors" min="1" max="200" oninput="validity.valid||(value='');" />
-                <input id="b5" type="number" class="form-control" placeholder="Bldg 5 # of floors" min="1" max="200" oninput="validity.valid||(value='');" />
+                <input id="b1" type="number" class="form-control" placeholder="Bldg 1 # of floors" min="1" max="10" oninput="validity.valid || (value = ''); BuildIt(this, document.getElementById('sky1'));" />
+                <input id="b2" type="number" class="form-control" placeholder="Bldg 2 # of floors" min="1" max="10" oninput="validity.valid||(value=''); BuildIt(this, document.getElementById('sky2'));" />
+                <input id="b3" type="number" class="form-control" placeholder="Bldg 3 # of floors" min="1" max="10" oninput="validity.valid||(value=''); BuildIt(this, document.getElementById('sky3'));" />
+                <input id="b4" type="number" class="form-control" placeholder="Bldg 4 # of floors" min="1" max="10" oninput="validity.valid||(value=''); BuildIt(this, document.getElementById('sky4'));" />
+                <input id="b5" type="number" class="form-control" placeholder="Bldg 5 # of floors" min="1" max="10" oninput="validity.valid||(value=''); BuildIt(this, document.getElementById('sky5'));" />
                 <div class="input-group-append" id="button-addon4">
                     <button id="clear-fizz-buzz" class="btn btn-danger" onclick="Demolish()">Clear</button>
                     <button class="btn btn-dark" onclick="Sunset(

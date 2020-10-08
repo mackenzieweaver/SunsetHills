@@ -57,3 +57,7 @@
 .input-group {
     margin-bottom: 30px;
 }
+
+#output {
+    margin-top: 16px;
+}
