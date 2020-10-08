@@ -25,8 +25,9 @@ html, body {
 }*/
 
 .skyscraper {
+    height: 5px;
     width: 150px;
-    padding: 30px;
+    padding: 3px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -36,6 +37,7 @@ html, body {
 }
 
 .gray {
+    height: 5px;
     background: linear-gradient(170deg, #666, #666);
 }
 

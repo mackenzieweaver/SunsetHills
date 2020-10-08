@@ -37,7 +37,7 @@ function BuildIt(input, sky) {
     sky.animate([
         // keyframes
         { height: sky.style.height },
-        { height: (stories * 50).toString() + "px" }
+        { height: (stories * 5).toString() + "px" }
     ], {
         // timing options
         duration: 1000,
