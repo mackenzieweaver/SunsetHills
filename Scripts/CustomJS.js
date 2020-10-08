@@ -53,17 +53,31 @@ function Demolish() {
     let b3 = document.getElementById('b3');
     let b4 = document.getElementById('b4');
     let b5 = document.getElementById('b5');
+    let sky1 = document.getElementById("sky1");
+    let sky2 = document.getElementById("sky2");
+    let sky3 = document.getElementById("sky3");
+    let sky4 = document.getElementById("sky4");
+    let sky5 = document.getElementById("sky5");
 
     b1.value = 1;
-    BuildIt(b1, document.getElementById("sky1"));
+    sky1.setAttribute("class", "skyscraper gray");
+    BuildIt(b1, sky1);
+
     b2.value = 1;
-    BuildIt(b1, document.getElementById("sky2"));
+    sky2.setAttribute("class", "skyscraper gray");
+    BuildIt(b1, sky2);
+
     b3.value = 1;
-    BuildIt(b1, document.getElementById("sky3"));
+    sky3.setAttribute("class", "skyscraper gray");
+    BuildIt(b1, sky3);
+
     b4.value = 1;
-    BuildIt(b1, document.getElementById("sky4"));
+    sky4.setAttribute("class", "skyscraper gray");
+    BuildIt(b1, sky4);
+
     b5.value = 1;
-    BuildIt(b1, document.getElementById("sky5"));
+    sky5.setAttribute("class", "skyscraper gray");
+    BuildIt(b1, sky5);
 
     document.getElementById("result").innerText = '';
     document.getElementById('b1').focus();
