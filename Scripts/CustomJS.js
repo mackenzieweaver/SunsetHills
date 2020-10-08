@@ -4,17 +4,22 @@
 
     // For each building (excluding the first one)
     for (let i = 1; i < buildings.length; i++) {
+        let bigger = false;
         // Check if any building before it is larger
         for (let j = 0; j < i; j++) {
             if (buildings[j] >= buildings[i]) {
                 // If previous building is bigger
-                results.push("Blind");
+                bigger = true;
                 break;
             } else {
                 // If previous building is smaller
-                results.push("See");
-                break;
+                continue;
             }
+        }
+        if (bigger) {
+            results.push("Blind");
+        } else {
+            results.push("See");
         }
     }
 
