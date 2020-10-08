@@ -25,7 +25,7 @@ html, body {
 }*/
 
 .skyscraper {
-    height: 300px;
+    height: 1px;
     width: 150px;
     padding: 30px;
     display: -webkit-box;
@@ -36,6 +36,14 @@ html, body {
     background: linear-gradient(170deg, #436c90, #233647);
     border-radius: 6px;
     box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.gray {
+    background: linear-gradient(170deg, #666, #666);
+}
+
+.blue {
+    background: linear-gradient(170deg, #436c90, #233647);
 }
 
 /*.window {
