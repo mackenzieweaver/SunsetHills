@@ -28,6 +28,8 @@ html, body {
     height: 5px;
     width: 150px;
     padding: 3px;
+    margin-left: 10px;
+    margin-right: 10px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
