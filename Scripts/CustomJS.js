@@ -33,7 +33,7 @@
 }
 
 function BuildIt(input, sky) {
-    let stories = parseInt(input.value);    
+    let stories = parseInt(input.value);
     sky.animate([
         // keyframes
         { height: sky.style.height },
