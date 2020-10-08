@@ -84,11 +84,23 @@
                 <div class="p-3 mb-5 bg-white rounded">Result: <span id="result"></span></div>
             </div>
             <div class="input-group">
-                <input id="b1" type="number" class="form-control" placeholder="Bldg 1 # of floors" min="0" max="10" oninput="validity.valid || (value = ''); BuildIt(this, document.getElementById('sky1'));" />
-                <input id="b2" type="number" class="form-control" placeholder="Bldg 2 # of floors" min="0" max="10" oninput="validity.valid||(value=''); BuildIt(this, document.getElementById('sky2'));" />
-                <input id="b3" type="number" class="form-control" placeholder="Bldg 3 # of floors" min="0" max="10" oninput="validity.valid||(value=''); BuildIt(this, document.getElementById('sky3'));" />
-                <input id="b4" type="number" class="form-control" placeholder="Bldg 4 # of floors" min="0" max="10" oninput="validity.valid||(value=''); BuildIt(this, document.getElementById('sky4'));" />
-                <input id="b5" type="number" class="form-control" placeholder="Bldg 5 # of floors" min="0" max="10" oninput="validity.valid||(value=''); BuildIt(this, document.getElementById('sky5'));" />
+
+                <input id="b1" type="number" class="form-control" placeholder="Bldg 1 # of floors" min="1" max="10" value="1" 
+                       onload="BuildIt(this, document.getElementById('sky1'))"
+                       oninput="validity.valid || (value = ''); BuildIt(this, document.getElementById('sky1'));" />
+                <input id="b2" type="number" class="form-control" placeholder="Bldg 2 # of floors" min="1" max="10" value="1" 
+                       onload="BuildIt(this, document.getElementById('sky1'))"
+                       oninput="validity.valid||(value=''); BuildIt(this, document.getElementById('sky2'));" />
+                <input id="b3" type="number" class="form-control" placeholder="Bldg 3 # of floors" min="1" max="10" value="1"
+                       onload="BuildIt(this, document.getElementById('sky1'))"
+                       oninput="validity.valid||(value=''); BuildIt(this, document.getElementById('sky3'));" />
+                <input id="b4" type="number" class="form-control" placeholder="Bldg 4 # of floors" min="1" max="10" value="1"
+                       onload="BuildIt(this, document.getElementById('sky1'))"
+                       oninput="validity.valid||(value=''); BuildIt(this, document.getElementById('sky4'));" />
+                <input id="b5" type="number" class="form-control" placeholder="Bldg 5 # of floors" min="1" max="10" value="1"
+                       onload="BuildIt(this, document.getElementById('sky1'))"
+                       oninput="validity.valid||(value=''); BuildIt(this, document.getElementById('sky5'));" />
+
                 <div class="input-group-append" id="button-addon4">
                     <button id="clear-fizz-buzz" class="btn btn-danger" onclick="Demolish()">Clear</button>
                     <button class="btn btn-dark" onclick="Sunset(
@@ -102,12 +114,8 @@
                 </div>
             </div>
             <div id="skyscrapers" class="row">
-                <div id="sky1">
-                    <div class="window"></div>
-                    <div class="window"></div>
-                    <div class="window"></div>
-
-                    <div class="window"></div>
+                <div id="sky1" class="skyscraper gray">
+                    <!--<div class="window"></div>
                     <div class="window"></div>
                     <div class="window"></div>
 
@@ -122,8 +130,13 @@
                     <div class="window"></div>
                     <div class="window"></div>
                     <div class="window"></div>
+
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="window"></div>-->
                 </div>
-                <div id="sky2">
+                <div id="sky2" class="skyscraper gray">
+                    <!--<div class="window"></div>
                     <div class="window"></div>
                     <div class="window"></div>
                     <div class="window"></div>
@@ -137,10 +150,10 @@
                     <div class="window"></div>
                     <div class="window"></div>
                     <div class="window"></div>
-                    <div class="window"></div>
-                    <div class="window"></div>
+                    <div class="window"></div>-->
                 </div>
-                <div id="sky3">
+                <div id="sky3" class="skyscraper gray">
+                    <!--<div class="window"></div>
                     <div class="window"></div>
                     <div class="window"></div>
                     <div class="window"></div>
@@ -154,10 +167,10 @@
                     <div class="window"></div>
                     <div class="window"></div>
                     <div class="window"></div>
-                    <div class="window"></div>
-                    <div class="window"></div>
+                    <div class="window"></div>-->
                 </div>
-                <div id="sky4">
+                <div id="sky4" class="skyscraper gray">
+                    <!--<div class="window"></div>
                     <div class="window"></div>
                     <div class="window"></div>
                     <div class="window"></div>
@@ -171,10 +184,10 @@
                     <div class="window"></div>
                     <div class="window"></div>
                     <div class="window"></div>
-                    <div class="window"></div>
-                    <div class="window"></div>
+                    <div class="window"></div>-->
                 </div>
-                <div id="sky5">
+                <div id="sky5" class="skyscraper gray">
+                    <!--<div class="window"></div>
                     <div class="window"></div>
                     <div class="window"></div>
                     <div class="window"></div>
@@ -188,8 +201,7 @@
                     <div class="window"></div>
                     <div class="window"></div>
                     <div class="window"></div>
-                    <div class="window"></div>
-                    <div class="window"></div>
+                    <div class="window"></div>-->
                 </div>
             </div>
         </div>

@@ -25,12 +25,9 @@ html, body {
 }*/
 
 .skyscraper {
-    height: 1px;
     width: 150px;
     padding: 30px;
-    display: -webkit-box;
     display: flex;
-    -webkit-box-pack: justify;
     justify-content: space-between;
     flex-wrap: wrap;
     background: linear-gradient(170deg, #436c90, #233647);

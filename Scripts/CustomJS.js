@@ -28,42 +28,54 @@
     let blind = results.filter(x => x == 'Blind').length;
     results.push(blind);
     document.getElementById("result").innerText = results;
+
+    ColorBuildings(results);
 }
 
-function BuildIt(stories, building) {
-    stories = parseInt(stories.value);
-    if (stories == 0 || isNaN(stories)) {
-        document.getElementById(building.id).setAttribute("class", "");
-    } else {
-        document.getElementById(building.id).setAttribute("class", "skyscraper gray");
-    }
-    let height = stories * 50;
-
-    building.animate([
+function BuildIt(input, sky) {
+    let stories = parseInt(input.value);    
+    sky.animate([
         // keyframes
-        { height: building.style.height },
-        { height: height.toString() + "px" }
+        { height: sky.style.height },
+        { height: (stories * 50).toString() + "px" }
     ], {
         // timing options
-            duration: 1000,
-            fill: 'forwards',
-            easing: "ease-in-out"
+        duration: 1000,
+        fill: 'forwards',
+        easing: "ease-in-out"
     });
 }
 
 function Demolish() {
     console.log("Rubbles...")
-    document.getElementById("sky1").removeAttribute("class");
-    document.getElementById("sky2").removeAttribute("class");
-    document.getElementById("sky3").removeAttribute("class");
-    document.getElementById("sky4").removeAttribute("class");
-    document.getElementById("sky5").removeAttribute("class");
-    document.getElementById("skyscrapers").style.height = 0;
-    document.getElementById('b1').value = '';
-    document.getElementById('b2').value = '';
-    document.getElementById('b3').value = '';
-    document.getElementById('b4').value = '';
-    document.getElementById('b5').value = '';
+    let b1 = document.getElementById('b1');
+    let b2 = document.getElementById('b2');
+    let b3 = document.getElementById('b3');
+    let b4 = document.getElementById('b4');
+    let b5 = document.getElementById('b5');
+
+    b1.value = 1;
+    BuildIt(b1, document.getElementById("sky1"));
+    b2.value = 1;
+    BuildIt(b1, document.getElementById("sky2"));
+    b3.value = 1;
+    BuildIt(b1, document.getElementById("sky3"));
+    b4.value = 1;
+    BuildIt(b1, document.getElementById("sky4"));
+    b5.value = 1;
+    BuildIt(b1, document.getElementById("sky5"));
+
     document.getElementById("result").innerText = '';
     document.getElementById('b1').focus();
+}
+
+function ColorBuildings(results) {
+    for (let i = 1; i <= 5; i++) {
+        let e = document.getElementById("sky" + i.toString());
+        if (results[i-1] == "See") {
+            e.setAttribute("class", "skyscraper blue");
+        } else {
+            e.setAttribute("class", "skyscraper gray");
+        }
+    }
 }
