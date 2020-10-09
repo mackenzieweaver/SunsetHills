@@ -16,4 +16,4 @@ My algorithm will then check from left to right. The first building always sees 
 ### Conclusion
 The outer loop will go through each building, and the inner loop will check that building against the rest of the buildings to its left. So not only am I using the arrays to loop through the input, I’m also using arrays to store and display my output. However, this challenge wouldn’t be nearly as fun or enjoyable to experience if there wasn’t a great user interface. So I’ve implemented a simple animation with javascript to grow the size of a building which is built with pure CSS. The buildings grow in size in response to real-time user-input and when the “Visualize” button is pressed then the output is displayed and the buildings are given a blue color if they can see the sunset and gray if they cannot.
 
-Check it out
+[Check it out](https://mackenzie-weaver-sunsethills.netlify.app/)
