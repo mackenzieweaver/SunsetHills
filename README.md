@@ -1,5 +1,7 @@
 # SunsetHills
 
+![Home Page](
+
 ## It's an array game baby
 
 The Sunset Hills coding challenge is intended to assess a candidate’s ability to work with Arrays. This challenge or a slight variation has been used by technology companies such as Amazon and was also featured on a Geeks for Geeks blog post titled "Amazon Interview Experience | Set 189 (For SDE-1)"
