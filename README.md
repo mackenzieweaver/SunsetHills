@@ -1,6 +1,6 @@
 # SunsetHills
 
-![Home Page](
+![Home Page](https://github.com/mackenzieweaver/SunsetHills/blob/main/Assets/sunsethills.png)
 
 ## It's an array game baby
 
